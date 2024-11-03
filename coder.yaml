@@ -14,7 +14,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "/mnt/user/docker/volumes/coder:/home/coder"
     environment:
-      CODER_PG_CONNECTION_URL: "postgresql://${PGUSER}:${PGPASS}@${PGHOST}:${PGPORT}/${PGDATABASE}?sslmode=disable"
+      #CODER_PG_CONNECTION_URL: "postgresql://${PGUSER}:${PGPASS}@${PGHOST}:${PGPORT}/${PGDATABASE}?sslmode=disable"
       CODER_HTTP_ADDRESS: "0.0.0.0:7080"
       CODER_ACCESS_URL: "https://coder.actuary.dev"
       CODER_WILDCARD_ACCESS_URL: "*.coder.actuary.dev"
