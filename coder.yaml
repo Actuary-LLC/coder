@@ -19,6 +19,11 @@ services:
       CODER_ACCESS_URL: "https://coder.actuary.dev"
       CODER_WILDCARD_ACCESS_URL: "*.coder.actuary.dev"
       group-add: "131" #docker group on host, not sure if this is needed
+      
+      CODER_EXTERNAL_AUTH_0_ID: coder-github-oauth
+      CODER_EXTERNAL_AUTH_0_TYPE: github
+      CODER_EXTERNAL_AUTH_0_CLIENT_ID: ${CODER_EXTERNAL_AUTH_0_CLIENT_ID}
+      CODER_EXTERNAL_AUTH_0_CLIENT_SECRET: ${CODER_EXTERNAL_AUTH_0_CLIENT_SECRET}
     deploy:
       labels:
         - "traefik.enable=true"
