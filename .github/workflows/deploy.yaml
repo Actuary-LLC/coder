@@ -34,7 +34,7 @@ jobs:
       PGPORT: ${{ vars.POSTGRES_PORT }}
       PGDATABASE: coder2
       PGPASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-      CODER_PG_CONNECTION_URL: "postgresql://${{ vars.POSTGRES_USER }}:${{ secrets.POSTGRES_PASSWORD }}@192.168.2.2:5432/coder2?sslmode=disable"
+      CODER_PG_CONNECTION_URL: "postgresql://${{ vars.POSTGRES_USER }}:${{ secrets.POSTGRES_PASSWORD }}@192.168.2.2:${{ vars.POSTGRES_PORT }}/coder2?sslmode=disable"
     steps:
       - name: deploy service
         run: |
