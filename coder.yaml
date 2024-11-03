@@ -21,8 +21,8 @@ services:
       group-add: "131" #docker group on host, not sure if this is needed
       CODER_EXTERNAL_AUTH_0_DISPLAY_NAME="Coder Github Login"
       CODER_EXTERNAL_AUTH_0_DISPLAY_ICON="https://actuary.llc/images/logo/logo@2x.png"
-      CODER_EXTERNAL_AUTH_0_ID: coder-github-oauth
-      CODER_EXTERNAL_AUTH_0_TYPE: github
+      CODER_EXTERNAL_AUTH_0_ID="coder-github-oauth"
+      CODER_EXTERNAL_AUTH_0_TYPE="github"
       CODER_EXTERNAL_AUTH_0_CLIENT_ID: ${CODER_EXTERNAL_AUTH_0_CLIENT_ID}
       CODER_EXTERNAL_AUTH_0_CLIENT_SECRET: ${CODER_EXTERNAL_AUTH_0_CLIENT_SECRET}
     deploy:
