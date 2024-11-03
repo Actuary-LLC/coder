@@ -1,0 +1,33 @@
+name: 'Deploy'
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  checkout-repository:
+    runs-on: [coral]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          repository: 'Actuary-LLC/coder'
+          ref: 'main'       
+      #- name: Configure application
+      #  run: |
+      #    sed -i 's/${AUTHENTIK_ID_OWNTRACKS}/${{ vars.AUTHENTIK_ID_OWNTRACKS }}/' config.yaml
+      #    sed -i 's/${AUTHENTIK_SECRET_OWNTRACKS}/${{ secrets.AUTHENTIK_SECRET_OWNTRACKS }}/' config.yaml
+      #    cat config.yaml
+      #- name: Sleep for 150 seconds
+      #  run: sleep 150s
+      #  shell: bash
+  deploy-task:
+    needs: checkout-repository
+    runs-on: [coral]
+    env:
+      TAG: ${{ github.sha }}
+    steps:
+      - name: deploy service
+        run: |
+          docker stack deploy -c coder.yaml coder
