@@ -36,8 +36,8 @@ services:
       labels:
         - "traefik.enable=true"
         - "traefik.http.routers.coder.rule=Host(`coder.actuary.dev`) || HostRegexp(`{subdomain:[a-zA-Z0-9-]+}.coder.actuary.dev`)"
-        - "traefik.http.routers.coder.tls.domains[0].main=coder.actuary.dev"
-        - "traefik.http.routers.coder.tls.domains[0].sans=*.coder.actuary.dev"
+        #- "traefik.http.routers.coder.tls.domains[0].main=coder.actuary.dev"
+        #- "traefik.http.routers.coder.tls.domains[0].sans=*.coder.actuary.dev"
         - "traefik.http.routers.coder.entrypoints=websecure"
         - "traefik.http.routers.coder.service=coder"
         - "traefik.http.routers.coder.tls.certresolver=myresolver"
