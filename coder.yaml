@@ -19,7 +19,7 @@ services:
       CODER_PG_CONNECTION_URL: ${CODER_PG_CONNECTION_URL}
       CODER_HTTP_ADDRESS: "0.0.0.0:7080"
       #CODER_ACCESS_URL: "https://coder.actuary.dev"
-      CODER_WILDCARD_ACCESS_URL: "https://.coder.actuary.dev"
+      CODER_WILDCARD_ACCESS_URL: "*.coder.actuary.dev"
       #group-add: "131" #docker group on host, not sure if this is needed
       CODER_EXTERNAL_AUTH_0_DISPLAY_NAME: "Coder Github Login"
       CODER_EXTERNAL_AUTH_0_DISPLAY_ICON: "https://actuary.llc/images/logo/logo@2x.png"
