@@ -10,8 +10,8 @@ services:
       reverse-proxy:
     ports:
       - "7080:7080"
-      - "8787:8787"
-      - "13339:13339"
+      #- "8787:8787"
+      #- "13339:13339"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "/mnt/user/docker/volumes/coder:/home/coder"
