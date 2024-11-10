@@ -16,6 +16,12 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "/mnt/user/docker/volumes/coder:/home/coder"
     environment:
+      #DEBUGGING
+      CODER_VERBOSE: "true"
+      CODER_TRACE_LOGS: "true"
+      CODER_TRACE_ENABLE: "true"
+      CODER_ENABLE_TERRAFORM_DEBUG_MODE: "true"
+      #ENV:
       CODER_PG_CONNECTION_URL: ${CODER_PG_CONNECTION_URL}
       CODER_HTTP_ADDRESS: "0.0.0.0:7080"
       #HTTP_PROXY: "192.168.2.3:80"
