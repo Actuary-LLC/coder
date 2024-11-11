@@ -21,6 +21,7 @@ services:
       CODER_TRACE_LOGS: "true"
       CODER_TRACE_ENABLE: "true"
       CODER_ENABLE_TERRAFORM_DEBUG_MODE: "true"
+      NO_PROXY: "::/0" #https://github.com/coder/coder/issues/12292
       #ENV:
       CODER_PG_CONNECTION_URL: ${CODER_PG_CONNECTION_URL}
       CODER_HTTP_ADDRESS: "0.0.0.0:7080"
