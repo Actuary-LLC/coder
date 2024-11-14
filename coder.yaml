@@ -27,8 +27,8 @@ services:
       #ENV:
       CODER_PG_CONNECTION_URL: ${CODER_PG_CONNECTION_URL}
       CODER_HTTP_ADDRESS: "0.0.0.0:7080"
-      #HTTP_PROXY: "192.168.2.3:80"
-      #HTTPS_PROXY: "192.168.2.3:443"
+      HTTP_PROXY: "192.168.2.3:80"
+      HTTPS_PROXY: "192.168.2.3:443"
       CODER_ACCESS_URL: "https://coder.actuary.dev"
       CODER_WILDCARD_ACCESS_URL: "*.coder.actuary.dev"
       CODER_DERP_FORCE_WEBSOCKETS: "true"
