@@ -2,6 +2,11 @@ version: "3.9"
 networks:
   reverse-proxy:
     external: true
+  ipv6-network:
+    enable_ipv6: true
+    ipam:
+      config:
+        - subnet: 2600:1700:85d0:4320::/64
 services:
   coder:
     image: ghcr.io/coder/coder:latest
