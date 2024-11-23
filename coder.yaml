@@ -63,6 +63,6 @@ services:
         - "traefik.http.middlewares.security-headers.headers.stsSeconds=15552000"
         - "traefik.http.middlewares.security-headers.headers.stsIncludeSubdomains=true"
         - "traefik.http.middlewares.security-headers.headers.forceSTSHeader=true"
-        - "traefik.http.routers.coder-https.middlewares=security-headers"
+        - "traefik.http.routers.coder.middlewares=security-headers"
         ## Middlewares
 #        - "traefik.http.routers.coder.middlewares=authentik@file"
