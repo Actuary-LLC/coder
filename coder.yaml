@@ -33,8 +33,9 @@ services:
       CODER_ACCESS_URL: "https://coder.actuary.dev"
       CODER_WILDCARD_ACCESS_URL: "*.coder.actuary.dev"
       #CODER_DERP_FORCE_WEBSOCKETS: "true"
-      HTTP_PROXY: "https://192.168.2.3"
-      HTTPS_PROXY: "https://192.168.2.3"
+      NO_PROXY: "*"
+      #HTTP_PROXY: "https://192.168.2.3"
+      #HTTPS_PROXY: "https://192.168.2.3"
       #group-add: "131" #docker group on host, not sure if this is needed
       CODER_EXTERNAL_AUTH_0_DISPLAY_NAME: "Coder Github Login"
       CODER_EXTERNAL_AUTH_0_DISPLAY_ICON: "https://actuary.llc/images/logo/logo@2x.png"
