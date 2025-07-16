@@ -18,7 +18,8 @@ services:
       #- "13339:13339"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
-      - "/mnt/user/docker/volumes/coder:/home/coder"
+      - "/mnt/user/docker/volumes/coder/home:/home/coder"
+      - "/mnt/user/docker/volumes/coder/tmp:/tmp"
     environment:
       #DEBUGGING
       CODER_VERBOSE: "true"
